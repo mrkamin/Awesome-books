@@ -1,11 +1,34 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<!-- TABLE OF CONTENTS -->
 
-# Awesome Books.
+# 📗 Table of Contents
 
-> In this Poject (Awesome Books) 😊 I will build a basic website that allows users to add/remove books from a list. I will achieve that by using JavaScript objects and arrays. I will also need to dynamically modify the DOM and add basic events.👌
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-## Built With
+<!-- PROJECT DESCRIPTION -->
 
+# 📖 [Awesome-Books] <a name="about-project"></a>
+
+**[Awesome-Books]** is a basic website that allows users to add/remove books from a list. We will achieve that by using JavaScript objects and arrays. We will also need to dynamically modify the DOM and add basic events.👌
+
+## 🛠 Built With <a name="built-with"></a>
 - HTML
 - Use semantic HTML tags.
 - Apply best practices in HTML code.
@@ -15,11 +38,27 @@
 - Use objects to store and access data.
 - Communicate technical concepts to other technical people.
 
-## Live Demo
+<!-- Features -->
 
+### Key Features <a name="key-features"></a>
 
+- **[Add_books]**
+- **[Remove_books]**
+- **[ave_in_local_storage]**
 
-## Getting Started
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://yourdeployedapplicationlink.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running follow these simple steps.
 
@@ -40,40 +79,82 @@ To get a local copy up and running follow these simple steps.
 - Open the index file and enjoy
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Loom video to explain the capstone project
+<!-- AUTHORS -->
 
+## 👥 Authors <a name="authors"></a>
 
+> Mention all of the collaborators of this project.
 
-
-## Authors
-
-👤 **Author1**
+👤 **Mohammad Rafi Amin**
 
 - GitHub: [@githubhandle](https://github.com/mrkamin)
 - Twitter: [@twitterhandle](https://twitter.com/Mohamma63974237)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammad-rafi-amin-63b4319b/)
-## 🤝 Contributing
+
+👤 **Rozh Bahman Tahir**
+
+- GitHub: https://github.com/rozhi-98
+- LinkedIn: https://www.linkedin.com/in/rozh-tahir-446203185
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[Add unique ID for each book]**
+- [ ] **[Add date and time]**
+- [ ] **[Create contact page]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/mrkamin/Capeston-Project/issues).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
 
-## Acknowledgments
-
-Original design idea by [Cindy Shin in Behance](https://www.behance.net/adagio07).
+## ⭐️ Show your support <a name="support"></a>
 
 
-## 📝 License
+If you like this project please support us by giving it a ⭐️.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank Cindy Shin in Behance for the original design idea: [Cindy Shin in Behance](https://www.behance.net/adagio07).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ <a name="faq"></a>
+
+- **[What frameworks have you used?]**
+
+  - [We have not used any frameworks]
+
+- **[Why did you work in group for a simple project?]**
+
+  - [Working in group is a habit of real work places and is good practice.]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
-
-
-## 📝 License
-
-This project is [MIT](./LICENSE) licensed.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
