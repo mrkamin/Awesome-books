@@ -159,7 +159,7 @@ section {
   }
 
   section {
-    margin: 0 500px;
+    margin: 0 300px;
   }
 
   .sect__one__items__item1 {
@@ -201,14 +201,14 @@ section {
   #sect__one__item1__p1 {
     background-color: var(--C-BASIC-LIGHT);
     border-radius: 1em;
-    width: 300px;
+    width: 200px;
     margin: 5px 5px;
   }
 
   .sect__one__items__item2 button {
     margin-left: 110px;
     box-shadow: var(--SHADOW);
-    width: 50px;
+    width: px;
   }
 
   .remove {
