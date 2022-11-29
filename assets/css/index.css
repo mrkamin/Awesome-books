@@ -188,6 +188,10 @@ section {
     align-items: center;
   }
 
+  .sect__one__items__item2 input {
+    border-radius: 1em;
+  }
+
   .sect__one__items__item2 hr {
     font-weight: 700;
     color: #000;
@@ -208,7 +212,8 @@ section {
   .sect__one__items__item2 button {
     margin-left: 110px;
     box-shadow: var(--SHADOW);
-    width: 55px;
+    width: 65px;
+    border-radius: 0.5em;
   }
 
   .remove {
