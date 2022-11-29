@@ -1,35 +1,69 @@
+/* || HTML Structure for Add Books */
 const addEl2 = document.getElementById('sect__one__items__item2');
-addEl2.innerHTML = `
-<form id="sect__one__item2__form">
-<p><input type="text" name="title" id="sect__one__item1__input1" placeholder="BookTitle" required></p>
-<p><input type="text" name="author" id="sect__one__item1__input2" placeholder="BookAthor" required></p>
-<button type="submit" id="sect__one__item1__btn1">Add</button></form>
+addEl2.innerHTML = `<hr>
+<h1> Add a new book<h1>
+<form id="form">
+<p><input type="text" name="title" id="title" placeholder="BookTitle" required></p>
+<p><input type="text" name="author" id="author" placeholder="BookAthor" required></p>
+<button type="submit" id="add__btn">Add</button></form>
 `;
 /* ======================================================================== */
 
-/* || VARIABLES AND FUNCTIONS */
+/* || Assign VARIABLES to access DOM IDs */
 const booksContainer = document.querySelector('.sect__one__items__item1');
 const newForm = document.querySelector('form');
+/* ======================================================================== */
 
-/* || EMPTY ARRAY */
+/* || DECLARE LOCAL EMPTY ARRAY */
 let books = [];
+/* ======================================================================== */
+
+/* || Create Class Declaratyion for Books in Book Library */
+class Books {
+  constructor(id, title, author) {
+    this.id = id;
+    this.title = title;
+    this.author = author;
+  };
+  addBook = () => {
+    books.push(this);
+  };
+  removeBook = () => {
+    library = library.filter((book) => book.id !== this.id);
+  };
+};
+/* ======================================================================== */
+
+/* Function to Add Click Events to Remove Button  */
+const addRemoveListener = (book) => {
+  document.querySelector(`#del__btn__${book.id}`).addEventListener('click', (e) => {
+    e.preventDefault();
+    book.removeBook();
+    localStorage.setItem('books', JSON.stringify(books));
+    const bookID = document.querySelector(`#book__${book.id}`);
+    if (bookID.parentNode) {
+      bookID.parentNode.removeChild(bookID);
+    }
+  });
+};
+/* ======================================================================== */
 
 /* || ADD HTML ElEMENTS */
 const library = (book) => {
   if (booksContainer.innerHTML === 'No thing books here') {
     booksContainer.innerHTML = '';
   }
-  const bookContent = document.createElement('div');
+  const bookContent = document.createElement('p');
+  bookContent.id = `book__${book.id}`;
+  bookContent.className = `book`;
   const PEl = `
-    <p id="sect__one__item1__p1">${book.title}</p>
-    <p id="sect__one__item1__p2">${book.author}</p>
-    <button onclick="remove(${book.id})" id="sect__one__item1__btn2-${book.id}">REMOVE</button>
-    <hr>`;
+    <div class="book1"><p id="sect__one__item1__p1">${book.title} by ${book.author}</p>
+    <button onclick="remove(${book.id})" id="del__btn__${book.id}" class="remove">REMOVE</button></div>
+    `;
   bookContent.innerHTML = PEl;
   booksContainer.appendChild(bookContent);
 };
-
-/* ============================================================================== */
+/* ======================================================================== */
 
 /* || FUNCTIONS TO ADD BOOKS TO THE LIB */
 const getData = () => {
@@ -43,8 +77,21 @@ const getData = () => {
     booksContainer.innerHTML = 'No thing books here';
   }
 };
+/* ======================================================================== */
 
-/* ================================================================ */
+/* || Check If Local Storage Exist */
+if (localStorage.getItem('books')) {
+  const booksData = JSON.parse(localStorage.getItem('books'));
+  booksData.forEach((element) => {
+    const newBook = new Books(element.id, element.title, element.author);
+    books.push(newBook);
+    library(newBook);
+    addRemoveListener(newBook);
+  });
+};
+/* ======================================================================== */
+
+/* || Add Submit Event Listener to Form to add Book to Local Storage and Dom */
 newForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const { title, author } = e.target;
@@ -64,6 +111,7 @@ newForm.addEventListener('submit', (e) => {
     author.value = '';
   }
 });
+/* ======================================================================== */
 
 /* || GET DATA FROM LOCAL STORAGE */
 function remove(c) {
@@ -73,3 +121,4 @@ function remove(c) {
 }
 getData();
 remove();
+/* ======================================================================== */
