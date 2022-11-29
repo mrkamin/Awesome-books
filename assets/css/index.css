@@ -208,7 +208,7 @@ section {
   .sect__one__items__item2 button {
     margin-left: 110px;
     box-shadow: var(--SHADOW);
-    width: px;
+    width: 55px;
   }
 
   .remove {
