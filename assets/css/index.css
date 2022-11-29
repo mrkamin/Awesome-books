@@ -1,4 +1,5 @@
 /* Simple medium-fidelity wireframes */
+
 /* Font */
 
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
@@ -95,123 +96,123 @@ body {
 }
 
 header {
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
 
 section {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .sect__one__items__item1 {
-    border: var(--BORDERS);
+  border: var(--BORDERS);
 }
 
 .book {
-display: flex;
-flex-direction: column;
-margin: 5px 0px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
 }
 
 .book1 {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 5px;
 }
 
 .sect__one__items__item2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.sect__one__items__item2 hr {
+  font-weight: 700;
+  color: #000;
+  width: 100px;
+}
+
+.sect__one__items__item2 h1 {
+  font-size: large;
+}
+
+.sect__one__items__item2 button {
+  margin-left: 145px;
+  box-shadow: var(--SHADOW);
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Lato", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.428;
+  }
+
+  header {
+    text-align: center;
+    padding: 10px;
+  }
+
+  section {
+    margin: 0 500px;
+  }
+
+  .sect__one__items__item1 {
+    border: var(--BORDERS);
+    border-radius: 2rem;
+  }
+
+  .book {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px;
+    border: var(--BORDERS);
+    border-radius: 1em;
+  }
+
+  .book1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 5px;
+  }
+
+  .sect__one__items__item2 {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
     align-items: center;
-}
+  }
 
-.sect__one__items__item2 hr {
-    font-weight:700;
+  .sect__one__items__item2 hr {
+    font-weight: 700;
     color: #000;
-    width:100px;
-}
+    width: 100px;
+  }
 
-.sect__one__items__item2 h1 {
+  .sect__one__items__item2 h1 {
     font-size: large;
-}
+  }
 
-.sect__one__items__item2 button {
-    margin-left: 145px;
+  #sect__one__item1__p1 {
+    background-color: var(--C-BASIC-LIGHT);
+    border-radius: 1em;
+    width: 300px;
+    margin: 5px 5px;
+  }
+
+  .sect__one__items__item2 button {
+    margin-left: 110px;
     box-shadow: var(--SHADOW);
-}
+    width: 50px;
+  }
 
-@media screen and (min-width: 992px) {
-    body {
-        background-attachment: fixed;
-        background-size: cover;
-        font-family: "Lato", sans-serif;
-        font-family: "Poppins", sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.428;
-      }
-      
-      header {
-          text-align: center;
-          padding: 10px;
-      }
-      
-      section {
-          margin-top: 10px;
-          margin: 0px 500px ;
-      }
-      
-      .sect__one__items__item1 {
-          border: var(--BORDERS);
-          border-radius: 2REM;
-      }
-      
-      .book {
-      display: flex;
-      flex-direction: column;
-      margin: 5px 20px;
-      border: var(--BORDERS);
-      border-radius: 1em;
-      }
-      
-      .book1 {
-          display: flex;
-          justify-content: space-between;
-          margin: 5px 5px;
-      }
-      
-      .sect__one__items__item2 {
-          display: flex;
-          flex-direction: column;
-          margin-top: 10px;
-          align-items: center;
-      }
-      
-      .sect__one__items__item2 hr {
-          font-weight:700;
-          color: #000;
-          width:100px;
-      }
-      
-      .sect__one__items__item2 h1 {
-          font-size: large;
-      }
-      
-      #sect__one__item1__p1 {
-        background-color: var(--C-BASIC-LIGHT);
-        border-radius: 1em;
-        width: 300px;
-        margin: 5px 5px;
-      }
-      .sect__one__items__item2 button {
-          margin-left: 110px;
-          box-shadow: var(--SHADOW);
-          width: 50px;
-      }  
-      
-      .remove {
-        border-radius: 1em;
-        width: 100px;
-      }
+  .remove {
+    border-radius: 1em;
+    width: 100px;
+  }
 }

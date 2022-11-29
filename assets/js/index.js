@@ -24,14 +24,12 @@ class Books {
     this.id = id;
     this.title = title;
     this.author = author;
-  };
+  }
+
   addBook = () => {
     books.push(this);
   };
-  removeBook = () => {
-    library = library.filter((book) => book.id !== this.id);
-  };
-};
+}
 /* ======================================================================== */
 
 /* Function to Add Click Events to Remove Button  */
@@ -55,7 +53,7 @@ const library = (book) => {
   }
   const bookContent = document.createElement('p');
   bookContent.id = `book__${book.id}`;
-  bookContent.className = `book`;
+  bookContent.className = 'book';
   const PEl = `
     <div class="book1"><p id="sect__one__item1__p1">${book.title} by ${book.author}</p>
     <button onclick="remove(${book.id})" id="del__btn__${book.id}" class="remove">REMOVE</button></div>
@@ -88,7 +86,7 @@ if (localStorage.getItem('books')) {
     library(newBook);
     addRemoveListener(newBook);
   });
-};
+}
 /* ======================================================================== */
 
 /* || Add Submit Event Listener to Form to add Book to Local Storage and Dom */
