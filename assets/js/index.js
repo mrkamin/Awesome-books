@@ -254,7 +254,7 @@ remove();
 document.write(new Date().getFullYear());
 
 function ondate() {
-  document.querySelector(".time").innerHTML = Date();
+  document.querySelector('.time').innerHTML = Date();
 }
 
 ondate();
