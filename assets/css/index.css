@@ -103,7 +103,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 10px;
+  margin: 0 10px;
 }
 
 nav ul {
@@ -130,7 +130,6 @@ nav a {
   width: 100%;
   text-align: end;
   margin-right: 50px;
-  background-color: var();
 }
 
 section {
@@ -140,19 +139,15 @@ section {
   height: 95vh;
 }
 
-.paragraph {
-padding: 16px;
-}
-
 .sect__one__items__item {
-text-align: center;
+  text-align: center;
 }
 
 .sect__one__items__item1 h1 {
   padding-top: 16px;
   font-size: var(--FS);
   font-family: var(--FF);
-  color:var(--C-DARK);
+  color: var(--C-DARK);
 }
 
 .sect__one__items__item1 {
@@ -169,7 +164,7 @@ text-align: center;
   color: var(--C-DARK);
   font-size: large;
   font-weight: 700;
-  margin: 0px 90px;
+  margin: 0 90px;
   border-radius: 0.5rem;
 }
 
@@ -179,7 +174,7 @@ text-align: center;
   margin: 5px 5px;
   border-radius: 5px;
   box-shadow: var(--SHADOW);
-  background-color:var(--C-BASIC-LIGHT);
+  background-color: var(--C-BASIC-LIGHT);
 }
 
 .remove {
@@ -189,6 +184,7 @@ text-align: center;
   font-weight: bold;
   color: var(--C-BASIC-LIGHT);
 }
+
 .book1 {
   display: flex;
   justify-content: space-between;
@@ -200,20 +196,20 @@ text-align: center;
   flex-direction: column;
   text-align: center;
   width: 100%;
-  position:absolute;
+  position: absolute;
 }
 
 .sect__one__items__item2 h1 {
   font-size: xx-large;
   color: var(--C-DARK);
-  
 }
+
 .sect__one__items__item2 input {
-box-shadow: var(--SHADOW);
-border: none;
-border-radius: 1rem;
-padding: 10px 10px;
-width: 50%;
+  box-shadow: var(--SHADOW);
+  border: none;
+  border-radius: 1rem;
+  padding: 10px 10px;
+  width: 50%;
 }
 
 .sect__one__items__item2 button {
@@ -230,7 +226,6 @@ footer {
   bottom: 0;
   text-align: center;
   width: 100%;
-  text-align: center;
   padding: 5px 0;
   box-shadow: var(--SHADOW);
 }
@@ -252,14 +247,14 @@ footer {
 }
 
 .sect__one__items__item3 h1 {
-color: var(--C-DARK);
-margin-top: 200px;
-font-size: xx-large;
+  color: var(--C-DARK);
+  margin-top: 200px;
+  font-size: xx-large;
 }
 
 .sect__one__items__item3 p {
   color: var(--C-DARK);
-  font-size:large;
+  font-size: large;
   font-weight: bolder;
 }
 
@@ -290,7 +285,7 @@ font-size: xx-large;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 200px;
+    margin: 0 200px;
   }
 
   nav h1 {
@@ -298,31 +293,37 @@ font-size: xx-large;
     color: var(--C-BLUE);
     font-family: var(--FF);
   }
- 
+
   nav a {
     color: var(--C-BLUE);
   }
 
-.time {
-  padding-right: 200px;
-  background-color: var(--C-BLUE);
-  font-size: large;
-}
+  .time {
+    padding-right: 200px;
+    background-color: var(--C-BLUE);
+    font-size: large;
+  }
+
+  .sect__one__items__item {
+    align-items: center;
+    width: 50%;
+  }
 
   .sect__one__items__item1 {
-    border: var(--BORDERS);
+    display: flex;
+    flex-direction: column;
     border-radius: 2rem;
-    width: 50%;
-    margin: 50px 500px;
-    position:fixed;
+    width: 100%;
+    justify-content: center;
   }
 
   .book {
+    background-color: #636383a2;
     display: flex;
     flex-direction: column;
-    margin: 5px 20px;
     border: var(--BORDERS);
     border-radius: 1em;
+    width: 100%;
   }
 
   .book1 {
@@ -336,9 +337,8 @@ font-size: xx-large;
     flex-direction: column;
     text-align: center;
     width: 100%;
-    position:absolute;
+    position: absolute;
   }
-  
 
   .sect__one__items__item2 input {
     border-radius: 0.5em;

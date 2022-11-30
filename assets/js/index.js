@@ -34,11 +34,10 @@ newContactEl.innerHTML = `
 /* ======================================================================== */
 
 /* || Function to generate random id's when called */
-const uid = () => Date.now().toString(36) + Math.random().toString(36).substr(2);
 
 /* || Get all relevant elements from the DOM */
 const newSectOne = document.querySelector('#sect__one');
-const newLoad = document.querySelector('#screen__loader')
+const newLoad = document.querySelector('#screen__loader');
 const newNavNew = document.querySelector('#nav__new');
 const newLibrary = document.querySelector('#sect__one__items__item1');
 const newNavList = document.querySelector('#nav__list');
@@ -97,17 +96,17 @@ newContact.addEventListener('click', () => {
     newSectOne.classList.replace('add-back', 'contact-back');
     newContact.classList.add('active');
   }
-  });
-  /* ======================================================================== */
+});
+/* ======================================================================== */
 
-  /* || Add Event Listener to List Button to Show Library */
+/* || Add Event Listener to List Button to Show Library */
 newNavList.addEventListener('click', () => {
   loader();
   if (newForm.classList.contains('show')) {
     newForm.classList.replace('show', 'hide');
     newNavNew.classList.remove('active');
     newLibrary.classList.replace('hide', 'show');
-    newSectOne.style.height='';
+    newSectOne.style.height = '';
     newSectOne.classList.replace('add-back', 'screen__loader');
     newSectOne.style.paddingBottom = '140px';
     newNavList.classList.add('active');
@@ -123,10 +122,10 @@ newNavList.addEventListener('click', () => {
 
 /* || Assign VARIABLES to access DOM IDs */
 const booksContant = document.querySelector('.sect__one__items__item1');
-booksContant.innerHTML= `
+booksContant.innerHTML = `
 <h1>All Awesomm Books</h1>
 <div id="sect__one__items__item" class="sect__one__items__item">
-</div>`
+</div>`;
 /* ======================================================================== */
 
 /* || DECLARE LOCAL EMPTY ARRAY */
@@ -163,9 +162,9 @@ const addRemoveListener = (book) => {
 const booksContainer = document.querySelector('#sect__one__items__item');
 /* || ADD HTML ElEMENTS */
 const library = (book) => {
-  if (booksContainer.innerHTML === `<p class="paragraph">No thing books here.<i class="fa-solid fa-book fa-1x"></i></p>`) {
+  if (booksContainer.innerHTML === '<p class="paragraph">No thing books here.<i class="fa-solid fa-book fa-1x"></i></p>') {
     booksContainer.innerHTML = '';
-  };
+  }
 
   const bookContent = document.createElement('p');
   bookContent.id = `book__${book.id}`;
@@ -188,7 +187,7 @@ const getData = () => {
       library(element);
     });
   } else {
-    booksContainer.innerHTML = `<p class="paragraph">No thing books here.<i class="fa-solid fa-book fa-1x"></i></p>`;
+    booksContainer.innerHTML = '<p class="paragraph">No thing books here.<i class="fa-solid fa-book fa-1x"></i></p>';
   }
 };
 /* ======================================================================== */
@@ -224,20 +223,20 @@ newForm.addEventListener('submit', (e) => {
     title.value = '';
     author.value = '';
   }
-    loader();
-    if (newForm.classList.contains('show')) {
-      newForm.classList.replace('show', 'hide');
-      newNavNew.classList.remove('active');
-      newLibrary.classList.replace('hide', 'show');
-      newSectOne.style.paddingBottom = '140px';
-      newNavList.classList.add('active');
-    } else {
-      newContactEl.classList.replace('show', 'hide');
-      newContact.classList.remove('active');
-      newLibrary.classList.replace('hide', 'show');
-      newSectOne.style.paddingBottom = '140px';
-      newNavList.classList.add('active');
-    }
+  loader();
+  if (newForm.classList.contains('show')) {
+    newForm.classList.replace('show', 'hide');
+    newNavNew.classList.remove('active');
+    newLibrary.classList.replace('hide', 'show');
+    newSectOne.style.paddingBottom = '140px';
+    newNavList.classList.add('active');
+  } else {
+    newContactEl.classList.replace('show', 'hide');
+    newContact.classList.remove('active');
+    newLibrary.classList.replace('hide', 'show');
+    newSectOne.style.paddingBottom = '140px';
+    newNavList.classList.add('active');
+  }
 });
 /* ======================================================================== */
 
@@ -250,3 +249,12 @@ function remove(c) {
 getData();
 remove();
 /* ======================================================================== */
+
+/* || Function for Date And Time */
+document.write(new Date().getFullYear());
+
+function ondate() {
+  document.querySelector(".time").innerHTML = Date();
+}
+
+ondate();
