@@ -13,7 +13,7 @@ newLoad.innerHTML = `
 /* ======================================================================== */
 
 /* || Form */
-const newForm = document.getElementById('sect__one__items__item2');//add-id
+const newForm = document.getElementById('sect__one__items__item2');
 newForm.innerHTML = `
 <h1> Add a new book</h1>
 <form id="form">
@@ -24,7 +24,7 @@ newForm.innerHTML = `
 /* ======================================================================== */
 
 /* || Contact */
-const newContactEl = document.getElementById('sect__one__items__item3');//contact-id
+const newContactEl = document.getElementById('sect__one__items__item3');
 newContactEl.innerHTML = `
 <h1>Contact Information</h1>
       <p>Do you have any Information or do you just want to say "Hello"? <br> You can reach out to us!</p>
@@ -39,13 +39,11 @@ newContactEl.innerHTML = `
 /* || Function to generate random id's when called */
 
 /* || Get all relevant elements from the DOM */
-const newSectOne = document.querySelector('#sect__one');//content
-const newNavNew = document.querySelector('#nav__new');//new-btn
-const newLibrary = document.querySelector('#sect__one__items__item1');// list-id
-const newNavList = document.querySelector('#nav__list'); //list-btn
-const newContact = document.querySelector('#nav__contact');//contact-btn
-const newBookSection = document.querySelector('#sect__one__items__item');//library
-
+const newSectOne = document.querySelector('#sect__one');
+const newNavNew = document.querySelector('#nav__new');
+const newLibrary = document.querySelector('#sect__one__items__item1');
+const newNavList = document.querySelector('#nav__list');
+const newContact = document.querySelector('#nav__contact');
 
 /* ======================================================================== */
 
@@ -127,7 +125,7 @@ newNavList.addEventListener('click', () => {
 /* || Assign VARIABLES to access DOM IDs */
 const booksContant = document.querySelector('.sect__one__items__item1');
 booksContant.innerHTML = `
-<h1>All Awesomm Books</h1>
+<h1 class="h1">All Awesomm Books</h1>
 <div id="sect__one__items__item" class="sect__one__items__item">
 </div>`;
 /* ======================================================================== */
