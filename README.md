@@ -95,8 +95,8 @@ To get a local copy up and running follow these simple steps.
 
 👤 **Rozh Bahman Tahir**
 
-- GitHub: [@githubhandle](https://github.com/rozhi-98)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rozh-tahir-446203185)
+- GitHub: [@githubhandle]()
+- LinkedIn: [LinkedIn]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
