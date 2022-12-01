@@ -1,27 +1,30 @@
 /* || HTML Structure for Add Books */
 
 /* || Screen__Loader */
-const screenLoadEl = document.getElementById('screen__loader');
-screenLoadEl.innerHTML = `
-<p id="loader" class="loader">
-        <p></p><p></p>
-      </p>
+const newLoad = document.getElementById('screen__loader');
+newLoad.innerHTML = `
+<div id="loader" class="loader">
+<div class="myload">
+  <p></p>
+  <p></p>
+</div>
+</div>  
 `;
 /* ======================================================================== */
 
 /* || Form */
-const newForm = document.getElementById('sect__one__items__item2');
+const newForm = document.getElementById('sect__one__items__item2');//add-id
 newForm.innerHTML = `
-<h1> Add a new book<h1>
+<h1> Add a new book</h1>
 <form id="form">
-<p><input type="text" name="title" id="title" placeholder="BookTitle" required></p>
-<p><input type="text" name="author" id="author" placeholder="BookAthor" required></p>
+<input type="text" name="title" id="title" placeholder="BookTitle" required>
+<input type="text" name="author" id="author" placeholder="BookAthor" required>
 <button type="submit" id="add__btn">Add</button></form>
 `;
 /* ======================================================================== */
 
 /* || Contact */
-const newContactEl = document.getElementById('sect__one__items__item3');
+const newContactEl = document.getElementById('sect__one__items__item3');//contact-id
 newContactEl.innerHTML = `
 <h1>Contact Information</h1>
       <p>Do you have any Information or do you just want to say "Hello"? <br> You can reach out to us!</p>
@@ -36,12 +39,13 @@ newContactEl.innerHTML = `
 /* || Function to generate random id's when called */
 
 /* || Get all relevant elements from the DOM */
-const newSectOne = document.querySelector('#sect__one');
-const newLoad = document.querySelector('#screen__loader');
-const newNavNew = document.querySelector('#nav__new');
-const newLibrary = document.querySelector('#sect__one__items__item1');
-const newNavList = document.querySelector('#nav__list');
-const newContact = document.querySelector('#nav__contact');
+const newSectOne = document.querySelector('#sect__one');//content
+const newNavNew = document.querySelector('#nav__new');//new-btn
+const newLibrary = document.querySelector('#sect__one__items__item1');// list-id
+const newNavList = document.querySelector('#nav__list'); //list-btn
+const newContact = document.querySelector('#nav__contact');//contact-btn
+const newBookSection = document.querySelector('#sect__one__items__item');//library
+
 
 /* ======================================================================== */
 
@@ -64,15 +68,15 @@ newNavNew.addEventListener('click', () => {
     newLibrary.classList.replace('show', 'hide');
     newNavList.classList.remove('active');
     newForm.classList.replace('hide', 'show');
-    newSectOne.style.height = '90vh';
-    newSectOne.classList.replace('screen__loader', 'add-back');
+    newSectOne.style.height = '85vh';
+    newSectOne.classList.replace('sect__one', 'add__back');
     newNavNew.classList.add('active');
   } else {
     newContactEl.classList.replace('show', 'hide');
     newContact.classList.remove('active');
     newForm.classList.replace('hide', 'show');
-    newSectOne.style.height = '90vh';
-    newSectOne.classList.replace('contact-back', 'add-back');
+    newSectOne.style.height = '85vh';
+    newSectOne.classList.replace('contact__back', 'add__back');
     newNavNew.classList.add('active');
   }
 });
@@ -85,15 +89,15 @@ newContact.addEventListener('click', () => {
     newLibrary.classList.replace('show', 'hide');
     newNavList.classList.remove('active');
     newContactEl.classList.replace('hide', 'show');
-    newSectOne.style.height = '90vh';
-    newSectOne.classList.replace('screen__loader', 'contact-back');
+    newSectOne.style.height = '85vh';
+    newSectOne.classList.replace('sect__one', 'contact__back');
     newContact.classList.add('active');
   } else {
-    newNavList.classList.replace('show', 'hide');
-    newNavNew.remove('active');
+    newForm.classList.replace('show', 'hide');
+    newNavNew.classList.remove('active');
     newContactEl.classList.replace('hide', 'show');
-    newSectOne.style.height = '90vh';
-    newSectOne.classList.replace('add-back', 'contact-back');
+    newSectOne.style.height = '85vh';
+    newSectOne.classList.replace('add__back', 'contact__back');
     newContact.classList.add('active');
   }
 });
@@ -107,7 +111,7 @@ newNavList.addEventListener('click', () => {
     newNavNew.classList.remove('active');
     newLibrary.classList.replace('hide', 'show');
     newSectOne.style.height = '';
-    newSectOne.classList.replace('add-back', 'screen__loader');
+    newSectOne.classList.replace('add__back', 'sect__one');
     newSectOne.style.paddingBottom = '140px';
     newNavList.classList.add('active');
   } else {
@@ -115,7 +119,7 @@ newNavList.addEventListener('click', () => {
     newContact.classList.remove('active');
     newLibrary.classList.replace('hide', 'show');
     newSectOne.style.paddingBottom = '140px';
-    newSectOne.classList.replace('contact-back', 'screen__loader');
+    newSectOne.classList.replace('contact__back', 'sect__one');
     newNavList.classList.add('active');
   }
 });
@@ -170,8 +174,8 @@ const library = (book) => {
   bookContent.id = `book__${book.id}`;
   bookContent.className = 'book';
   const PEl = `
-    <div class="book1"><p id="sect__one__item1__p1">${book.title} by ${book.author}</p>
-    <button onclick="remove(${book.id})" id="del__btn__${book.id}" class="remove">REMOVE</button></div>
+    <p id="sect__one__item1__p1">${book.title} by ${book.author}</p>
+    <button onclick="remove(${book.id})" id="del__btn__${book.id}" class="remove">REMOVE</button>
     `;
   bookContent.innerHTML = PEl;
   booksContainer.appendChild(bookContent);
@@ -228,13 +232,13 @@ newForm.addEventListener('submit', (e) => {
     newForm.classList.replace('show', 'hide');
     newNavNew.classList.remove('active');
     newLibrary.classList.replace('hide', 'show');
-    newSectOne.style.paddingBottom = '140px';
+    newSectOne.style.paddingBottom = '150px';
     newNavList.classList.add('active');
   } else {
     newContactEl.classList.replace('show', 'hide');
     newContact.classList.remove('active');
     newLibrary.classList.replace('hide', 'show');
-    newSectOne.style.paddingBottom = '140px';
+    newSectOne.style.paddingBottom = '150px';
     newNavList.classList.add('active');
   }
 });
