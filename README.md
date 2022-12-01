@@ -52,7 +52,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://mrkamin.github.io/Awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,68 +94,3 @@ To get a local copy up and running follow these simple steps.
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammad-rafi-amin-63b4319b/)
 
 👤 **Rozh Bahman Tahir**
-
-- GitHub: [@githubhandle](https://github.com/rozhi-98)
-- Twitter: [@twitterhandle](https://twitter.com/rozhi98?t=xS_0o-oG7K5cgodULjesNA&s=09)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rozh-tahir-446203185)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[Add unique ID for each book]**
-- [ ] **[Add date and time]**
-- [ ] **[Create contact page]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/mrkamin/Capeston-Project/issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
-
-## ⭐️ Show your support <a name="support"></a>
-
-
-If you like this project please support us by giving it a ⭐️.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-I would like to thank Cindy Shin in Behance for the original design idea: [Cindy Shin in Behance](https://www.behance.net/adagio07).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-- **[What frameworks have you used?]**
-
-  - [We have not used any frameworks]
-
-- **[Why did you work in group for a simple project?]**
-
-  - [Working in group is a habit of real work places and is good practice.]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>

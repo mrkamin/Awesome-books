@@ -1,17 +1,133 @@
 /* || HTML Structure for Add Books */
-const addEl2 = document.getElementById('sect__one__items__item2');
-addEl2.innerHTML = `<hr>
-<h1> Add a new book<h1>
+
+/* || Screen__Loader */
+const newLoad = document.getElementById('screen__loader');
+newLoad.innerHTML = `
+<div id="loader" class="loader">
+<div class="myload">
+  <p></p>
+  <p></p>
+</div>
+</div>  
+`;
+/* ======================================================================== */
+
+/* || Form */
+const newForm = document.getElementById('sect__one__items__item2');
+newForm.innerHTML = `
+<h1> Add a new book</h1>
 <form id="form">
-<p><input type="text" name="title" id="title" placeholder="BookTitle" required></p>
-<p><input type="text" name="author" id="author" placeholder="BookAthor" required></p>
+<input type="text" name="title" id="title" placeholder="BookTitle" required>
+<input type="text" name="author" id="author" placeholder="BookAthor" required>
 <button type="submit" id="add__btn">Add</button></form>
 `;
 /* ======================================================================== */
 
+/* || Contact */
+const newContactEl = document.getElementById('sect__one__items__item3');
+newContactEl.innerHTML = `
+<h1>Contact Information</h1>
+      <p>Do you have any Information or do you just want to say "Hello"? <br> You can reach out to us!</p>
+      <ul>
+        <li>Our e-mail: mrkamin2@gmail.com</li>
+        <li>Our phone number: 009259904851</li>
+        <li>Our address: Awesome Park, 22803 London, U.K</li>
+      </ul>
+`;
+/* ======================================================================== */
+
+/* || Function to generate random id's when called */
+
+/* || Get all relevant elements from the DOM */
+const newSectOne = document.querySelector('#sect__one');
+const newNavNew = document.querySelector('#nav__new');
+const newLibrary = document.querySelector('#sect__one__items__item1');
+const newNavList = document.querySelector('#nav__list');
+const newContact = document.querySelector('#nav__contact');
+
+/* ======================================================================== */
+
+/* || Function to show Loading Screen */
+const loader = () => {
+  newSectOne.classList.add('hide');
+  newLoad.classList.remove('hide');
+  setTimeout(() => {
+    newLoad.classList.add('hide');
+    newSectOne.classList.remove('hide');
+  }, 1000);
+};
+/* ======================================================================== */
+
+/* || Add event listener to new button to show form */
+newNavNew.addEventListener('click', () => {
+  loader();
+
+  if (newLibrary.classList.contains('show')) {
+    newLibrary.classList.replace('show', 'hide');
+    newNavList.classList.remove('active');
+    newForm.classList.replace('hide', 'show');
+    newSectOne.style.height = '85vh';
+    newSectOne.classList.replace('sect__one', 'add__back');
+    newNavNew.classList.add('active');
+  } else {
+    newContactEl.classList.replace('show', 'hide');
+    newContact.classList.remove('active');
+    newForm.classList.replace('hide', 'show');
+    newSectOne.style.height = '85vh';
+    newSectOne.classList.replace('contact__back', 'add__back');
+    newNavNew.classList.add('active');
+  }
+});
+/* ======================================================================== */
+
+/* || Add Evnt Listener to Contact Button to Show contact-Info */
+newContact.addEventListener('click', () => {
+  loader();
+  if (newLibrary.classList.contains('show')) {
+    newLibrary.classList.replace('show', 'hide');
+    newNavList.classList.remove('active');
+    newContactEl.classList.replace('hide', 'show');
+    newSectOne.style.height = '85vh';
+    newSectOne.classList.replace('sect__one', 'contact__back');
+    newContact.classList.add('active');
+  } else {
+    newForm.classList.replace('show', 'hide');
+    newNavNew.classList.remove('active');
+    newContactEl.classList.replace('hide', 'show');
+    newSectOne.style.height = '85vh';
+    newSectOne.classList.replace('add__back', 'contact__back');
+    newContact.classList.add('active');
+  }
+});
+/* ======================================================================== */
+
+/* || Add Event Listener to List Button to Show Library */
+newNavList.addEventListener('click', () => {
+  loader();
+  if (newForm.classList.contains('show')) {
+    newForm.classList.replace('show', 'hide');
+    newNavNew.classList.remove('active');
+    newLibrary.classList.replace('hide', 'show');
+    newSectOne.style.height = '';
+    newSectOne.classList.replace('add__back', 'sect__one');
+    newSectOne.style.paddingBottom = '140px';
+    newNavList.classList.add('active');
+  } else {
+    newContactEl.classList.replace('show', 'hide');
+    newContact.classList.remove('active');
+    newLibrary.classList.replace('hide', 'show');
+    newSectOne.style.paddingBottom = '140px';
+    newSectOne.classList.replace('contact__back', 'sect__one');
+    newNavList.classList.add('active');
+  }
+});
+
 /* || Assign VARIABLES to access DOM IDs */
-const booksContainer = document.querySelector('.sect__one__items__item1');
-const newForm = document.querySelector('form');
+const booksContant = document.querySelector('.sect__one__items__item1');
+booksContant.innerHTML = `
+<h1 class="h1">All Awesomm Books</h1>
+<div id="sect__one__items__item" class="sect__one__items__item">
+</div>`;
 /* ======================================================================== */
 
 /* || DECLARE LOCAL EMPTY ARRAY */
@@ -45,18 +161,19 @@ const addRemoveListener = (book) => {
   });
 };
 /* ======================================================================== */
-
+const booksContainer = document.querySelector('#sect__one__items__item');
 /* || ADD HTML ElEMENTS */
 const library = (book) => {
-  if (booksContainer.innerHTML === 'No thing books here') {
+  if (booksContainer.innerHTML === '<p class="paragraph">No thing books here.<i class="fa-solid fa-book fa-1x"></i></p>') {
     booksContainer.innerHTML = '';
   }
+
   const bookContent = document.createElement('p');
   bookContent.id = `book__${book.id}`;
   bookContent.className = 'book';
   const PEl = `
-    <div class="book1"><p id="sect__one__item1__p1">${book.title} by ${book.author}</p>
-    <button onclick="remove(${book.id})" id="del__btn__${book.id}" class="remove">REMOVE</button></div>
+    <p id="sect__one__item1__p1">${book.title} by ${book.author}</p>
+    <button onclick="remove(${book.id})" id="del__btn__${book.id}" class="remove">REMOVE</button>
     `;
   bookContent.innerHTML = PEl;
   booksContainer.appendChild(bookContent);
@@ -72,7 +189,7 @@ const getData = () => {
       library(element);
     });
   } else {
-    booksContainer.innerHTML = 'No thing books here';
+    booksContainer.innerHTML = '<p class="paragraph">No thing books here.<i class="fa-solid fa-book fa-1x"></i></p>';
   }
 };
 /* ======================================================================== */
@@ -108,6 +225,20 @@ newForm.addEventListener('submit', (e) => {
     title.value = '';
     author.value = '';
   }
+  loader();
+  if (newForm.classList.contains('show')) {
+    newForm.classList.replace('show', 'hide');
+    newNavNew.classList.remove('active');
+    newLibrary.classList.replace('hide', 'show');
+    newSectOne.style.paddingBottom = '150px';
+    newNavList.classList.add('active');
+  } else {
+    newContactEl.classList.replace('show', 'hide');
+    newContact.classList.remove('active');
+    newLibrary.classList.replace('hide', 'show');
+    newSectOne.style.paddingBottom = '150px';
+    newNavList.classList.add('active');
+  }
 });
 /* ======================================================================== */
 
@@ -120,3 +251,12 @@ function remove(c) {
 getData();
 remove();
 /* ======================================================================== */
+
+/* || Function for Date And Time */
+document.write(new Date().getFullYear());
+
+function ondate() {
+  document.querySelector('.time').innerHTML = Date();
+}
+
+ondate();
